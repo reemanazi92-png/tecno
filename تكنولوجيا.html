@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مراجعة مقرر تكنلوجيا الإتصالات و المعلومات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+<style>
+body {
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #66707e, #cfd8dc, #8cb1c4);
+    color: #212121;
+    padding: 20px;
+    direction: rtl;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 900;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    transition: transform 0.3s, text-shadow 0.3s;
+}
+
+h1:hover {
+    transform: scale(1.05);
+    text-shadow: 4px 4px 15px rgba(0,0,0,0.6);
+}
+
+.question {
+    background: linear-gradient(145deg, #e1e5ea, #90a4ae);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-right: 5px solid #355570;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    text-align: right;
+    transition: transform 0.2s, box-shadow 0.2s, background 0.3s;
+}
+
+.question:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    background: #eceff1;
+    border: 1px solid #b0bec5;
+    text-align: right;
+    font-weight: 600;
+    transition: 0.3s;
+    color: #212121;
+}
+
+.options label:hover {
+    background: #90caf9;
+    color: #000;
+    transform: scale(1.02);
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #394d5e, #14293a);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #0a0a0a, #d6e1eb);
+    transform: scale(1.05);
+}
+
+#result {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 25px;
+    color: #0a1b40;
+}
+
+.correct-answer {
+    color: #1565c0;
+    font-weight: bold;
+    margin-top: 8px;
+}
+</style>
+</head>
+<body>
+
+<h1>مراجعة مقرر تكنلوجيا الإتصالات و المعلومات</h1>
+
+
+
+<div id="quiz-container">
+    <!-- أسئلة اختيار من متعدد -->
+    <div class="question" data-answer="A">
+        <p>1. التكنولوجيا المستعملة لمحاكاة القدرات الذهنية البشرية وأنماط عملها:</p>
+        <div class="options">
+            <label><input type="radio" name="q1" value="A"> الذكاء الاصطناعي</label>
+            <label><input type="radio" name="q1" value="B"> تكنولوجيا المعلومات</label>
+            <label><input type="radio" name="q1" value="C"> تكنولوجيا التعليم</label>
+            <label><input type="radio" name="q1" value="D"> تكنولوجيا الأعمال</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="B">
+        <p>2. تعتبر الصواريخ نوع من أنواع تكنولوجيا:</p>
+        <div class="options">
+            <label><input type="radio" name="q2" value="A"> تكنولوجيا النقل</label>
+            <label><input type="radio" name="q2" value="B"> تكنولوجيا الفضاء</label>
+            <label><input type="radio" name="q2" value="C"> الذكاء الاصطناعي</label>
+            <label><input type="radio" name="q2" value="D"> تكنولوجيا الأعمال</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="D">
+        <p>3. جميع الخيارات التالية تعتبر من خصائص التكنولوجيا ماعدا:</p>
+        <div class="options">
+            <label><input type="radio" name="q3" value="A"> بساطة النظام</label>
+            <label><input type="radio" name="q3" value="B"> التجانس والعالمية</label>
+            <label><input type="radio" name="q3" value="C"> الازدواجية</label>
+            <label><input type="radio" name="q3" value="D"> التضليل</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="A">
+        <p>4. شبكة انترنت مصغرة ذات خصوصية يتم الوصول إليها عبر ملقم يتحكم به المستخدم:</p>
+        <div class="options">
+            <label><input type="radio" name="q4" value="A"> الانترانت</label>
+            <label><input type="radio" name="q4" value="B"> الاكسترانت</label>
+            <label><input type="radio" name="q4" value="C"> الانترنت</label>
+            <label><input type="radio" name="q4" value="D"> البروتوكولات</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="A">
+        <p>5. برامج صغيرة تقوم بإحداث أضرار في الحاسب:</p>
+        <div class="options">
+            <label><input type="radio" name="q5" value="A"> الفيروسات</label>
+            <label><input type="radio" name="q5" value="B"> التضليل</label>
+            <label><input type="radio" name="q5" value="C"> السيطرة</label>
+            <label><input type="radio" name="q5" value="D"> التعطيل</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="B">
+        <p>6. هجوم يستطيع القرصان من خلاله التحكم في جميع ملفات الضحية:</p>
+        <div class="options">
+            <label><input type="radio" name="q6" value="A"> هجوم التضليل</label>
+            <label><input type="radio" name="q6" value="B"> هجوم السيطرة الكاملة</label>
+            <label><input type="radio" name="q6" value="C"> هجوم المعلومات المرسلة</label>
+            <label><input type="radio" name="q6" value="D"> هجوم تعطيل الخدمة</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="A">
+        <p>7. الهجوم الذي يقوم من خلاله القرصان بانتحال شخصية مستخدم موثوق به للحصول على معلومات غير مصرح له:</p>
+        <div class="options">
+            <label><input type="radio" name="q7" value="A"> هجوم التضليل</label>
+            <label><input type="radio" name="q7" value="B"> هجوم المعلومات المرسلة</label>
+            <label><input type="radio" name="q7" value="C"> هجوم السيطرة الكاملة</label>
+            <label><input type="radio" name="q7" value="D"> هجوم تعطيل الخدمة</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="B">
+        <p>8. التبادل التجاري الإلكتروني بين شركة وشركة أخرى يسمى:</p>
+        <div class="options">
+            <label><input type="radio" name="q8" value="A"> نموذج تعامل الشركات مع العملاء الأفراد C2B</label>
+            <label><input type="radio" name="q8" value="B"> نموذج تعامل الشركات مع الشركات B2B</label>
+            <label><input type="radio" name="q8" value="C"> نموذج تعامل الأفراد مع الأفراد C2C</label>
+            <label><input type="radio" name="q8" value="D"> النموذج التجاري</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="A">
+        <p>9. أسلوب من أساليب التعلم الذي يستخدم وسائل التكنولوجيا الحديثة ويعتمد على تقديم المحتوى باستخدام التقنيات الحديثة:</p>
+        <div class="options">
+            <label><input type="radio" name="q9" value="A"> التعليم الإلكتروني</label>
+            <label><input type="radio" name="q9" value="B"> الحكومة الإلكترونية</label>
+            <label><input type="radio" name="q9" value="C"> المصارف الإلكترونية</label>
+            <label><input type="radio" name="q9" value="D"> المكتبات الإلكترونية</label>
+        </div>
+    </div>
+
+    <!-- أسئلة صح وخطأ -->
+    <div class="question" data-answer="صح">
+        <p>10. تساعد التكنولوجيا على توفير الوقت والجهد:</p>
+        <div class="options">
+            <label><input type="radio" name="q10" value="صح"> صح</label>
+            <label><input type="radio" name="q10" value="خطأ"> خطأ</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="صح">
+        <p>11. تساعد تكنولوجيا الأعمال في خلق طرق جديدة للتنافس مع الشركات:</p>
+        <div class="options">
+            <label><input type="radio" name="q11" value="صح"> صح</label>
+            <label><input type="radio" name="q11" value="خطأ"> خطأ</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="خطأ">
+        <p>12. تتكون الاكسترانت من عدد كبير من الحاسبات المترابطة في جميع أنحاء العالم:</p>
+        <div class="options">
+            <label><input type="radio" name="q12" value="صح"> صح</label>
+            <label><input type="radio" name="q12" value="خطأ"> خطأ</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="صح">
+        <p>13. نشر الوعي الأمني من مستلزمات أمن الشبكات:</p>
+        <div class="options">
+            <label><input type="radio" name="q13" value="صح"> صح</label>
+            <label><input type="radio" name="q13" value="خطأ"> خطأ</label>
+        </div>
+    </div>
+
+    <div class="question" data-answer="صح">
+        <p>14. تعد نظم المعلومات المحاسبية أحد الطرق التي تستخدمها الشركات من أجل جمع بياناتها المالية والعمل على تخزينها ليتم معالجتها وإدارتها:</p>
+        <div class="options">
+            <label><input type="radio" name="q14" value="صح"> صح</label>
+            <label><input type="radio" name="q14" value="خطأ"> خطأ</label>
+        </div>
+    </div>
+
+<div class="question" data-answer="C">
+    <p>15. المثيرات الخارجية التي يستقبلها الإنسان من خلال وسائل استقبال المعلومات المختلفة:</p>
+    <div class="options">
+        <label><input type="radio" name="q15" value="A"> المخرجات</label>
+        <label><input type="radio" name="q15" value="B"> الأنشطة</label>
+        <label><input type="radio" name="q15" value="C"> المدخلات</label>
+        <label><input type="radio" name="q15" value="D"> العمليات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="D">
+    <p>16. جميع الخيارات التالية تمثل المستويات الإدارية ماعدا:</p>
+    <div class="options">
+        <label><input type="radio" name="q16" value="A"> الإدارة العليا</label>
+        <label><input type="radio" name="q16" value="B"> الإدارة الوسطى</label>
+        <label><input type="radio" name="q16" value="C"> الإدارة التشغيلية</label>
+        <label><input type="radio" name="q16" value="D"> الإدارة المنظمة</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>17. القرارات التي لها تأثير على المنظمة ويستمر لعدة سنوات في المستقبل:</p>
+    <div class="options">
+        <label><input type="radio" name="q17" value="A"> القرارات الشمولية</label>
+        <label><input type="radio" name="q17" value="B"> القرارات طويلة الأجل</label>
+        <label><input type="radio" name="q17" value="C"> القرارات العامة</label>
+        <label><input type="radio" name="q17" value="D"> القرارات الكلية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>18. تمثل الناتج النهائي للعمليات التي تمت حتى الآن؟</p>
+    <div class="options">
+        <label><input type="radio" name="q18" value="A"> المخرجات</label>
+        <label><input type="radio" name="q18" value="B"> المدخلات</label>
+        <label><input type="radio" name="q18" value="C"> العمليات</label>
+        <label><input type="radio" name="q18" value="D"> الأنشطة</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>19. استخدام الانترنت والتقنيات الحديثة لإتمام كافة إجراءات التوظيف بداية من الإعلان عن الوظيفة الشاغرة يندرج تحت:</p>
+    <div class="options">
+        <label><input type="radio" name="q19" value="A"> التوظيف الإلكتروني</label>
+        <label><input type="radio" name="q19" value="B"> الأسواق الإلكترونية</label>
+        <label><input type="radio" name="q19" value="C"> التجارة الإلكترونية</label>
+        <label><input type="radio" name="q19" value="D"> الحكومة الإلكترونية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>20. من آداب وأخلاقيات استخدام الاتصالات:</p>
+    <div class="options">
+        <label><input type="radio" name="q20" value="A"> السخرية في جميع الحوارات</label>
+        <label><input type="radio" name="q20" value="B"> احترام حقوق الآخرين</label>
+        <label><input type="radio" name="q20" value="C"> انتهاك الخصوصية</label>
+        <label><input type="radio" name="q20" value="D"> السرقة الفكرية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>21. هو نظام يعمل على مساعدة الأعمال التجارية في صنع قراراتها التي تحتاج العديد من الإجراءات:</p>
+    <div class="options">
+        <label><input type="radio" name="q21" value="A"> نظم دعم القرارات</label>
+        <label><input type="radio" name="q21" value="B"> نظم البيانات</label>
+        <label><input type="radio" name="q21" value="C"> نظم المعلومات التنفيذية</label>
+        <label><input type="radio" name="q21" value="D"> نظم الدعم التنفيذي</label>
+    </div>
+</div>
+
+<div class="question" data-answer="D">
+    <p>22. هي شبكة تربط بين كل المشتركين فيها حول العالم عن طريق الشبكة الهاتفية:</p>
+    <div class="options">
+        <label><input type="radio" name="q22" value="A"> شبكة الانترانت</label>
+        <label><input type="radio" name="q22" value="B"> شبكة الاكسترانت</label>
+        <label><input type="radio" name="q22" value="C"> شبكة lan</label>
+        <label><input type="radio" name="q22" value="D"> شبكة الانترنت</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>23. من الأنماط السلوكية للمخرجات:</p>
+    <div class="options">
+        <label><input type="radio" name="q23" value="A"> الاستماع</label>
+        <label><input type="radio" name="q23" value="B"> التفاعل</label>
+        <label><input type="radio" name="q23" value="C"> التفكير</label>
+        <label><input type="radio" name="q23" value="D"> البصر</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>24. دعم أنظمة المعلومات في مستويات الإدارة المختلفة، حيث تتجلى مهمتها في توفير تقارير روتينية على الأنشطة السابقة والحالية بدلاً من تقديم توقعات:</p>
+    <div class="options">
+        <label><input type="radio" name="q24" value="A"> نظم التقارير الإدارية</label>
+        <label><input type="radio" name="q24" value="B"> نظم المعلومات التنفيذية</label>
+        <label><input type="radio" name="q24" value="C"> نظم قواعد المعرفة</label>
+        <label><input type="radio" name="q24" value="D"> التخطيط والإدارة</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>25. من آثار إدخال تكنولوجيا المعلومات في المكتب:</p>
+    <div class="options">
+        <label><input type="radio" name="q25" value="A"> نقل أسرع للمعلومات</label>
+        <label><input type="radio" name="q25" value="B"> تضييع الوقت والاستمتاع</label>
+        <label><input type="radio" name="q25" value="C"> نقل أبطأ للمعلومات</label>
+        <label><input type="radio" name="q25" value="D"> تخزين أقل للملفات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>26. تعرف على أنها البرامج التي تستخدم من أجل إدخال البيانات الخاصة بهذا النظام وتتبعها ومعرفة كشوف المرتبات والإدارة:</p>
+    <div class="options">
+        <label><input type="radio" name="q26" value="A"> نظم معلومات الموارد البشرية</label>
+        <label><input type="radio" name="q26" value="B"> نظم البيانات</label>
+        <label><input type="radio" name="q26" value="C"> نظم المعلومات التنفيذية</label>
+        <label><input type="radio" name="q26" value="D"> نظم دعم القرارات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>27. ترتبط بتفسير بيئة الأعمال وتتعلق بأخلاقيات المنظمة تجاه المجتمع:</p>
+    <div class="options">
+        <label><input type="radio" name="q27" value="A"> الثقافة</label>
+        <label><input type="radio" name="q27" value="B"> العمليات</label>
+        <label><input type="radio" name="q27" value="C"> التهديدات</label>
+        <label><input type="radio" name="q27" value="D"> التكنولوجيا</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>28. تعتبر ______ إحدى الأدوات الرئيسية التي تتيح التواصل بين الأشخاص بغض النظر عن مواقعهم:</p>
+    <div class="options">
+        <label><input type="radio" name="q28" value="A"> أجهزة الحواسيب</label>
+        <label><input type="radio" name="q28" value="B"> نظم الدعم التنفيذي</label>
+        <label><input type="radio" name="q28" value="C"> العمليات</label>
+        <label><input type="radio" name="q28" value="D"> نظم البيانات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>29. من قرارات الإدارة العليا:</p>
+    <div class="options">
+        <label><input type="radio" name="q29" value="A"> قرارات تهديدية</label>
+        <label><input type="radio" name="q29" value="B"> قرارات كلية</label>
+        <label><input type="radio" name="q29" value="C"> قرارات منطقية</label>
+        <label><input type="radio" name="q29" value="D"> قرارات شخصية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="C">
+    <p>30. تعد سهولة تقديم المعلومات التي يحتاجها المستهلك السياحي، تخفيض تكاليف، سهولة تطوير المنتج، زيادة القدرة التنافسية للمؤسسات من أهمية:</p>
+    <div class="options">
+        <label><input type="radio" name="q30" value="A"> السياحة الإلكترونية</label>
+        <label><input type="radio" name="q30" value="B"> الأسواق الإلكترونية</label>
+        <label><input type="radio" name="q30" value="C"> التجارة الإلكترونية</label>
+        <label><input type="radio" name="q30" value="D"> الحكومة الإلكترونية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="C">
+    <p>31. تشمل عدد كبير من المشاركين بسبب سهولة الوصول للمادة العلمية:</p>
+    <div class="options">
+        <label><input type="radio" name="q31" value="A"> المساقات المحدودة</label>
+        <label><input type="radio" name="q31" value="B"> التعليم المدمج</label>
+        <label><input type="radio" name="q31" value="C"> المساقات الضخمة</label>
+        <label><input type="radio" name="q31" value="D"> التجارة الإلكترونية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>32. يستخدم في دمج أجهزة الكمبيوتر وأجهزة الاستشعار وقدرات الشبكات في الأشياء اليومية:</p>
+    <div class="options">
+        <label><input type="radio" name="q32" value="A"> انترنت الأشياء</label>
+        <label><input type="radio" name="q32" value="B"> الملفات</label>
+        <label><input type="radio" name="q32" value="C"> العمليات</label>
+        <label><input type="radio" name="q32" value="D"> التعليمات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="C">
+    <p>33. مثال من الأساليب المستخدمة في عملية الاتصال غير اللفظية:</p>
+    <div class="options">
+        <label><input type="radio" name="q33" value="A"> الاتصال الشفهي</label>
+        <label><input type="radio" name="q33" value="B"> الاتصال الإلكتروني</label>
+        <label><input type="radio" name="q33" value="C"> لغة الجسد والتعبيرات</label>
+        <label><input type="radio" name="q33" value="D"> اتصال هاتفي</label>
+    </div>
+</div>
+
+<div class="question" data-answer="C">
+    <p>34. من مكونات العملية الإدارية:</p>
+    <div class="options">
+        <label><input type="radio" name="q34" value="A"> التفكير</label>
+        <label><input type="radio" name="q34" value="B"> العشوائية</label>
+        <label><input type="radio" name="q34" value="C"> التنظيم</label>
+        <label><input type="radio" name="q34" value="D"> التغيير</label>
+    </div>
+</div>
+
+<div class="question" data-answer="D">
+    <p>35. هي نوع من أنواع التكنولوجيا مسؤول عن عمل روابط بين الشبكات لإنشاء شبكات أكبر:</p>
+    <div class="options">
+        <label><input type="radio" name="q35" value="A"> أجهزة الاستشعار</label>
+        <label><input type="radio" name="q35" value="B"> تقنية المعلومات</label>
+        <label><input type="radio" name="q35" value="C"> الأسواق الإلكترونية</label>
+        <label><input type="radio" name="q35" value="D"> الشبكات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>36. الوسيلة التي يتم عن طريقها إرسال الرسالة:</p>
+    <div class="options">
+        <label><input type="radio" name="q36" value="A"> قناة الاتصال</label>
+        <label><input type="radio" name="q36" value="B"> المستقبل</label>
+        <label><input type="radio" name="q36" value="C"> التغذية الراجعة</label>
+        <label><input type="radio" name="q36" value="D"> المرسل</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>37. الذين يمثلون العاملين، المستشارين، المتعاقدين، والفنيين وينجزون كل العمليات والخدمات:</p>
+    <div class="options">
+        <label><input type="radio" name="q37" value="A"> البشر</label>
+        <label><input type="radio" name="q37" value="B"> التكنولوجيا</label>
+        <label><input type="radio" name="q37" value="C"> الثقافة</label>
+        <label><input type="radio" name="q37" value="D"> العمليات</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>38. المعوقات التي تتعلق بطرفي الاتصال وهما المرسل والمستقبل:</p>
+    <div class="options">
+        <label><input type="radio" name="q38" value="A"> معوقات فردية</label>
+        <label><input type="radio" name="q38" value="B"> معوقات بيئية</label>
+        <label><input type="radio" name="q38" value="C"> معوقات تنظيمية</label>
+        <label><input type="radio" name="q38" value="D"> معوقات تكتيكية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>39. عند بدء أي حوار إلكتروني، يجب:</p>
+    <div class="options">
+        <label><input type="radio" name="q39" value="A"> انتقاء الكلمات</label>
+        <label><input type="radio" name="q39" value="B"> تهكير الحسابات</label>
+        <label><input type="radio" name="q39" value="C"> إرسال الفيروسات</label>
+        <label><input type="radio" name="q39" value="D"> فرض الآراء</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>40. الإدارة الإشرافية على التنفيذ المباشر للعمل:</p>
+    <div class="options">
+        <label><input type="radio" name="q40" value="A"> الإدارة العليا</label>
+        <label><input type="radio" name="q40" value="B"> الإدارة الدنيا</label>
+        <label><input type="radio" name="q40" value="C"> الإدارة الوسطى</label>
+        <label><input type="radio" name="q40" value="D"> الإدارة المنظمة</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>41. خاصية ترتبط بعدم تغيير البيانات والمعلومات أو فقدها أو إهدارها وإتاحتها فقط لأشخاص وكيانات معتمدة ومصرح لها:</p>
+    <div class="options">
+        <label><input type="radio" name="q41" value="A"> السرية</label>
+        <label><input type="radio" name="q41" value="B"> التوافر</label>
+        <label><input type="radio" name="q41" value="C"> السلامة</label>
+        <label><input type="radio" name="q41" value="D"> عدم الشمولية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="C">
+    <p>42. المصادر التي تشمل معلومات جديدة لحقائق أو أفكار معروفة:</p>
+    <div class="options">
+        <label><input type="radio" name="q42" value="A"> المصادر الثانوية</label>
+        <label><input type="radio" name="q42" value="B"> المصادر من الدرجة الثالثة</label>
+        <label><input type="radio" name="q42" value="C"> المصادر الأولية</label>
+        <label><input type="radio" name="q42" value="D"> المصادر من الدرجة الرابعة</label>
+    </div>
+</div>
+
+<div class="question" data-answer="B">
+    <p>43. التطبيقات النصية التي تعمل على الجهاز:</p>
+    <div class="options">
+        <label><input type="radio" name="q43" value="A"> الحوسبة السحابية</label>
+        <label><input type="radio" name="q43" value="B"> البرامج</label>
+        <label><input type="radio" name="q43" value="C"> البيانات الرقمية</label>
+        <label><input type="radio" name="q43" value="D"> المعاملات الرقمية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="D">
+    <p>44. المعاملات التي تتم عبر الانترنت بين الأشخاص دون استخدام الورق:</p>
+    <div class="options">
+        <label><input type="radio" name="q44" value="A"> الحوسبة السحابية</label>
+        <label><input type="radio" name="q44" value="B"> البيانات الرقمية</label>
+        <label><input type="radio" name="q44" value="C"> البرامج</label>
+        <label><input type="radio" name="q44" value="D"> المعاملات الرقمية</label>
+    </div>
+</div>
+
+<div class="question" data-answer="A">
+    <p>45. هو العلم الذي يعمل على توفير الحماية للمعلومات من المخاطر التي تهددها وذلك من خلال توفير الوسائل اللازمة لتوفيرها لحماية المعلومات من المخاطر الداخلية أو الخارجية:</p>
+    <div class="options">
+        <label><input type="radio" name="q45" value="A"> أمن المعلومات</label>
+        <label><input type="radio" name="q45" value="B"> تقنية المعلومات</label>
+        <label><input type="radio" name="q45" value="C"> شبكة الانترنت</label>
+        <label><input type="radio" name="q45" value="D"> تكنولوجيا الاتصالات</label>
+    </div>
+</div>
+<div class="question" data-answer="صح">
+    <p>46. تساعد التكنولوجيا على توفير الوقت والجهد.</p>
+    <div class="options">
+        <label><input type="radio" name="q46" value="صح"> صح</label>
+        <label><input type="radio" name="q46" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>47. تساعد تكنولوجيا الأعمال في خلق طرق جديدة للتنافس مع الشركات.</p>
+    <div class="options">
+        <label><input type="radio" name="q47" value="صح"> صح</label>
+        <label><input type="radio" name="q47" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>48. تتكون الاكسترانت من عدد كبير من الحاسبات المترابطة في جميع أنحاء العالم.</p>
+    <div class="options">
+        <label><input type="radio" name="q48" value="صح"> صح</label>
+        <label><input type="radio" name="q48" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>49. نشر الوعي الأمني من مستلزمات أمن الشبكات.</p>
+    <div class="options">
+        <label><input type="radio" name="q49" value="صح"> صح</label>
+        <label><input type="radio" name="q49" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>50. تعد نظم المعلومات المحاسبية أحد الطرق التي تستخدمها الشركات من أجل جمع بياناتها المالية والعمل على تخزينها ليتم معالجتها وإدارتها.</p>
+    <div class="options">
+        <label><input type="radio" name="q50" value="صح"> صح</label>
+        <label><input type="radio" name="q50" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>51. المسؤولية الاجتماعية هي نظرية أخلاقية تقترح أن أي كيان، سواء كان منظمة أو فرداً، لا يقع على عاتقه العمل لمصلحة المجتمع ككل.</p>
+    <div class="options">
+        <label><input type="radio" name="q51" value="صح"> صح</label>
+        <label><input type="radio" name="q51" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>52. مفهوم الصحة الإلكترونية يقصد به استغلال القطاع الصحي لتكنولوجيا الاتصال والمعلومات ضمن العالم الرقمي بتطبيقات كثيرة.</p>
+    <div class="options">
+        <label><input type="radio" name="q52" value="صح"> صح</label>
+        <label><input type="radio" name="q52" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>53. الحكومة الإلكترونية هي استخدام تكنولوجيا المعلومات والاتصالات لتحسين أسلوب أداء الخدمات الحكومية.</p>
+    <div class="options">
+        <label><input type="radio" name="q53" value="صح"> صح</label>
+        <label><input type="radio" name="q53" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>54. من آداب وأخلاقيات استخدام الاتصالات الالتزام بالمواقع المفيدة.</p>
+    <div class="options">
+        <label><input type="radio" name="q54" value="صح"> صح</label>
+        <label><input type="radio" name="q54" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>55. البشر والتكنولوجيا من مكونات ومحاور أمن المعلومات.</p>
+    <div class="options">
+        <label><input type="radio" name="q55" value="صح"> صح</label>
+        <label><input type="radio" name="q55" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>56. من خصائص العملية الإدارية الغموض، وأن لا تكون معروفة لجميع أعضاء الشركة.</p>
+    <div class="options">
+        <label><input type="radio" name="q56" value="صح"> صح</label>
+        <label><input type="radio" name="q56" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>57. "برمجة الذكاء الاصطناعي" من القضايا الأخلاقية والاجتماعية.</p>
+    <div class="options">
+        <label><input type="radio" name="q57" value="صح"> صح</label>
+        <label><input type="radio" name="q57" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>58. من المخاطر التي تهدد شبكات المعلومات الفيروسات فقط.</p>
+    <div class="options">
+        <label><input type="radio" name="q58" value="صح"> صح</label>
+        <label><input type="radio" name="q58" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>59. الاتصال هو الوسيلة الأساسية التي يحصل الناس من خلالها على المعلومات ويتبادلونها.</p>
+    <div class="options">
+        <label><input type="radio" name="q59" value="صح"> صح</label>
+        <label><input type="radio" name="q59" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>60. الإدارة الدنيا هي السلطة الأعلى المسؤولة عن القرارات الاستراتيجية.</p>
+    <div class="options">
+        <label><input type="radio" name="q60" value="صح"> صح</label>
+        <label><input type="radio" name="q60" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>61. تعتبر الاتصالات وسيلة الإداريين في إدارة أنشطتهم الإدارية.</p>
+    <div class="options">
+        <label><input type="radio" name="q61" value="صح"> صح</label>
+        <label><input type="radio" name="q61" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>62. مع تكنولوجيا المعلومات أصبح الاتصال أصعب وأبطأ من أي وقت مضى.</p>
+    <div class="options">
+        <label><input type="radio" name="q62" value="صح"> صح</label>
+        <label><input type="radio" name="q62" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>63. ميزة أسلوب الاتصال الكتابي أنه مدون ومسجل ويمكن أن يستخدم مثل وسيلة إثبات قانونية.</p>
+    <div class="options">
+        <label><input type="radio" name="q63" value="صح"> صح</label>
+        <label><input type="radio" name="q63" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="صح">
+    <p>64. قد يؤدي عدم وجود سياسات واضحة لاستخدام نظام المعلومات إلى مشكلات أمن ضخمة.</p>
+    <div class="options">
+        <label><input type="radio" name="q64" value="صح"> صح</label>
+        <label><input type="radio" name="q64" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<div class="question" data-answer="خطأ">
+    <p>65. وصول المهاجم للأسلاك والتجسس على المعلومات يعتبر هجوم تضليل.</p>
+    <div class="options">
+        <label><input type="radio" name="q65" value="صح"> صح</label>
+        <label><input type="radio" name="q65" value="خطأ"> خطأ</label>
+    </div>
+</div>
+
+<button onclick="checkAnswers()">عرض النتيجة</button>
+
+<div id="result"></div>
+
+<script>
+function checkAnswers() {
+    const questions = document.querySelectorAll('.question');
+    let unanswered = false;
+
+    // التحقق من أن كل الأسئلة تم الإجابة عليها
+    questions.forEach(q => {
+        const selected = q.querySelector('input[type="radio"]:checked');
+        if(!selected) unanswered = true;
+    });
+
+    if(unanswered){
+        alert("يرجى الإجابة على جميع الأسئلة قبل عرض النتيجة.");
+        return; // لا تعرض النتيجة حتى تكتمل جميع الإجابات
+    }
+
+    let total = 0;
+
+    questions.forEach(q => {
+        const answer = q.getAttribute('data-answer');
+        const selected = q.querySelector('input[type="radio"]:checked');
+
+        // إزالة أي ألوان سابقة
+        q.querySelectorAll('label').forEach(label => {
+            label.style.backgroundColor = "#eceff1";
+            label.style.color = "#212121";
+        });
+
+        if(selected.value === answer){
+            total++;
+            // تلوين الخيار الصحيح بالأخضر
+            q.querySelector(`input[value="${answer}"]`).parentElement.style.backgroundColor = "rgba(0, 200, 0, 0.3)";
+        } else {
+            // تلوين الخيار المختار بالأحمر
+            selected.parentElement.style.backgroundColor = "rgba(255, 0, 0, 0.3)";
+            // تلوين الخيار الصحيح بالأخضر
+            q.querySelector(`input[value="${answer}"]`).parentElement.style.backgroundColor = "rgba(0, 200, 0, 0.3)";
+        }
+    });
+
+    document.getElementById('result').innerText = `لقد أجبت بشكل صحيح على ${total} من ${questions.length} أسئلة`;
+}
+</script>
+
+
+</body>
+</html>
